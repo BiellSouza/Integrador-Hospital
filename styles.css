@@ -5,6 +5,7 @@ body {
 .jumbotron {
   background-color: #007bff;
   color: #fff;
+  text-align: center;
 }
 
 .form-group label {
@@ -43,8 +44,53 @@ body {
   background-color: #ffffff;
 }
 
+.table-responsive {
+  margin-top: 20px;
+}
+
 footer {
   background-color: #f8f9fa;
   padding: 10px;
   border-top: 1px solid #dddddd;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .medication-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .medication-item span {
+    margin-bottom: 10px;
+  }
+
+  .medication-item button {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .medication-item {
+    flex-direction: row;
+  }
 }
