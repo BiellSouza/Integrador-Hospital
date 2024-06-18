@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Medicamentos do Hospital</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron mt-4">
+        <h1 class="display-4 text-center">
+          Gerenciador de Medicamentos do Hospital
+        </h1>
+        <button
+          class="btn btn-info float-right"
+          data-toggle="modal"
+          data-target="#instructionsModal"
+        >
+          Instruções
+        </button>
+      </div>
+      <form id="medication-form" class="mb-4">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Nome do Medicamento</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="dosage">Dosagem</label>
+            <input type="text" class="form-control" id="dosage" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="frequency">Frequência</label>
+            <input type="text" class="form-control" id="frequency" required />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="startDate">Data de Início</label>
+            <input type="date" class="form-control" id="startDate" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Adicionar Medicamento
+        </button>
+      </form>
+      <h2 class="text-center">Lista de Medicamentos</h2>
+      <div class="medication-list-container mb-4">
+        <ul id="medication-list" class="list-group"></ul>
+      </div>
+      <div
+        id="confirmation-message"
+        class="alert alert-success mt-4"
+        style="display: none"
+      >
+        Seu pedido foi feito e enviado!
+      </div>
+      <h2 class="text-center mt-4">Estoque de Medicamentos</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome do Remédio</th>
+            <th>Quantidade</th>
+            <th>Validade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paracetamol</td>
+            <td>50</td>
+            <td>12/2023</td>
+          </tr>
+          <tr>
+            <td>Ibuprofeno</td>
+            <td>30</td>
+            <td>11/2024</td>
+          </tr>
+          <tr>
+            <td>Amoxicilina</td>
+            <td>20</td>
+            <td>01/2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal de Instruções -->
+    <div
+      class="modal fade"
+      id="instructionsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="instructionsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="instructionsModalLabel">
+              Instruções de Uso
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              1. Preencha os campos do formulário com as informações do
+              medicamento que deseja adicionar.
+            </p>
+            <p>
+              2. Clique no botão "Adicionar Medicamento" para salvar as
+              informações.
+            </p>
+            <p>
+              3. A lista de medicamentos será atualizada com o novo medicamento
+              adicionado.
+            </p>
+            <p>
+              4. Utilize os botões "Editar" e "Remover" para gerenciar os
+              medicamentos na lista.
+            </p>
+            <p>
+              5. Abaixo da lista de medicamentos, você encontrará uma tabela de
+              exemplo de estoque de medicamentos, com informações sobre nome,
+              quantidade e validade dos medicamentos disponíveis.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center mt-4 mb-4">
+      Site desenvolvido e programado pelo Desenvolvedor front Gabriel
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
