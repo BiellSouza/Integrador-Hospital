@@ -1,96 +1,79 @@
 body {
+  font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
 
-.jumbotron {
-  background-color: #007bff;
-  color: #fff;
+h1 {
+  color: #ffff;
+}
+
+h2 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+#add-medication-button {
+  background-color: #8b14f9;
+  color: #ffffff;
+}
+
+#confirmation-message {
   text-align: center;
+  font-size: 1.2rem;
 }
 
-.form-group label {
-  font-weight: bold;
+.table thead th {
+  background-color: #343a40;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-#medication-list {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.medication-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.medication-item span {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.medication-item button {
-  margin-left: 10px;
-}
-
-.medication-list-container {
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #ffffff;
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
 }
 
 .table-responsive {
   margin-top: 20px;
+  cursor: pointer;
 }
 
-footer {
-  background-color: #f8f9fa;
-  padding: 10px;
-  border-top: 1px solid #dddddd;
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .form-row {
-    flex-direction: column;
-  }
-
-  .form-group {
-    width: 100%;
-  }
-
-  .medication-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .medication-item span {
-    margin-bottom: 10px;
-  }
-
-  .medication-item button {
-    margin-left: 0;
-    margin-right: 10px;
-  }
+.jumbotron {
+  background-color: #8b14f9;
 }
 
-@media (min-width: 769px) {
-  .form-row {
-    display: flex;
-    flex-wrap: wrap;
+.logo {
+  display: flex;
+  position: absolute;
+  width: 300px; /* Largura padrão da logo */
+  height: 250px; /* Altura padrão da logo */
+  top: 70px; /* Posição vertical padrão */
+  right: 1280px; /* Posição horizontal padrão */
+  z-index: 1000; /* Z-index padrão */
+  opacity: 95%;
+
+  @media only screen and (max-width: 1280px) {
+    width: 200px; /* Reduz a largura para dispositivos maiores (pc) */
+    height: 150px; /* Reduz a altura para dispositivos maiores (pc) */
+    top: 150px; /* Ajusta a posição vertical para dispositivos maiores (pc) */
+    right: 1030px; /* Ajusta a posição horizontal para dispositivos maiores (pc) */
   }
 
-  .form-group {
-    flex: 1;
-    margin-right: 10px;
+  /* Media query para ajustar a logo em dispositivos menores */
+  @media only screen and (max-width: 768px) {
+    width: 200px; /* Reduz a largura para dispositivos menores (tablet) */
+    height: 150px; /* Reduz a altura para dispositivos menores (tablet) */
+    top: 0px; /* Ajusta a posição vertical para dispositivos menores (tablet) */
+    right: 10px; /* Ajusta a posição horizontal para dispositivos menores (tablet) */
   }
 
-  .medication-item {
-    flex-direction: row;
+  /* Media query para ajustar a logo em dispositivos ainda menores (celular) */
+  @media only screen and (max-width: 480px) {
+    display: none;
   }
 }
